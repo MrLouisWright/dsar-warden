@@ -1,0 +1,11 @@
+{
+  "request": { "id": "DSAR-2026-014", "subject": { "email": "jane@acme.io", "customer_id": "C123" }, "received": "2026-09-20", "verified": true, "completed": true },
+  "sources": [
+    { "id": "crm", "name": "CRM contacts", "path": "exports/crm.csv", "match": { "email": "Email" }, "exclude": ["password_hash"],
+      "purpose": "Customer relationship", "category": "Contact details", "recipients": ["Support team"], "retention": "2 years after last contact" },
+    { "id": "orders", "name": "Orders", "path": "exports/orders.jsonl", "match": { "customer_id": "customer.id" },
+      "purpose": "Order fulfilment", "category": "Transactions", "recipients": ["Payment processor", "Courier"], "retention": "6 years (HMRC)" },
+    { "id": "support", "name": "Support tickets", "path": "exports/tickets.json", "recordsPath": "tickets", "match": { "email": ["requester", "cc"] }, "redact": ["agent_email"],
+      "purpose": "Customer support", "category": "Correspondence", "recipients": [], "retention": "3 years" }
+  ]
+}

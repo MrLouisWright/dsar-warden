@@ -1,0 +1,10 @@
+{
+  "request": { "id": "DSAR-2026-001", "subject": { "email": "jane@acme.io" }, "received": "2026-01-05" },
+  "sources": [
+    { "id": "crm", "path": "crm.csv", "match": { "email": "email" } },
+    { "id": "mail", "path": "mail.jsonl", "match": { "email": "from" }, "purpose": "x", "category": "y", "recipients": [], "retention": "1y" },
+    { "id": "billing", "path": "missing.json" },
+    { "id": "logs", "path": "broken.json", "purpose": "x", "category": "y", "recipients": [], "retention": "1y" },
+    { "id": "crm", "path": "crm.csv", "match": { "email": "Email" }, "purpose": "x", "category": "y", "recipients": [], "retention": "1y" }
+  ]
+}

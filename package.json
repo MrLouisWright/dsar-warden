@@ -1,0 +1,53 @@
+{
+  "name": "dsar-warden",
+  "version": "1.0.0",
+  "description": "Assemble Data Subject Access Request (DSAR / GDPR Article 15) exports from CSV, JSON and JSONL sources into one structured, checksummed bundle, and check it: subject matching, secret fields removed, third-party data flagged, Article 15 metadata, identity verification and the one-month deadline. SARIF, GitHub Action. Zero deps.",
+  "type": "module",
+  "main": "./src/index.js",
+  "types": "./src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "default": "./src/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "bin": {
+    "dsar-warden": "bin/dsar-warden.js"
+  },
+  "files": [
+    "src",
+    "bin",
+    "action.yml",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  },
+  "keywords": [
+    "dsar",
+    "subject-access-request",
+    "gdpr",
+    "article-15",
+    "privacy",
+    "data-export",
+    "compliance",
+    "sarif",
+    "github-action"
+  ],
+  "author": "Louis Wright <hello@louiswright.co.uk> (https://github.com/MrLouisWright)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrLouisWright/dsar-warden.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MrLouisWright/dsar-warden/issues"
+  },
+  "homepage": "https://github.com/MrLouisWright/dsar-warden#readme"
+}
