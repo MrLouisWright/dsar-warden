@@ -174,6 +174,18 @@ Node.js 18 or newer. Zero runtime dependencies.
 
 If this project is useful to you, you can support its development with a donation: [Buy me a coffee](https://donate.stripe.com/aFa00lek3cvX4Ds2Fk9EI0b). It helps keep these tools maintained, documented and free for everyone.
 
+## Credit (optional)
+
+Free to use under MIT, no attribution required. If dsar-warden helps you, a link back is appreciated:
+
+```html
+<a href="https://louiswright.co.uk">Built with dsar-warden by Louis Wright</a>
+```
+
+```markdown
+[![Built with dsar-warden by Louis Wright](https://img.shields.io/badge/built%20with-dsar--warden-blue)](https://louiswright.co.uk)
+```
+
 ## Licence
 
 MIT © Louis Wright ([Louis Wright](https://github.com/MrLouisWright))
