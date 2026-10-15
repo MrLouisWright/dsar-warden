@@ -1,5 +1,7 @@
 # dsar-warden
 
+[![npm version](https://img.shields.io/npm/v/dsar-warden.svg)](https://www.npmjs.com/package/dsar-warden) [![CI](https://github.com/MrLouisWright/dsar-warden/actions/workflows/ci.yml/badge.svg)](https://github.com/MrLouisWright/dsar-warden/actions/workflows/ci.yml) [![Node](https://img.shields.io/node/v/dsar-warden.svg)](https://nodejs.org) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 > Assemble Data Subject Access Request exports from many systems into one structured, checksummed bundle, and catch the mistakes before you send it.
 
 Under GDPR Article 15 (and the UK GDPR) a person can ask for a copy of everything you hold about them, and you normally have one calendar month to answer. In practice that means exporting from the CRM, the order database, the support desk and the mailing tool, filtering each export down to one person, stripping password hashes and other people's details, and adding the purposes, recipients and retention for each. `dsar-warden` does that from a small `dsar.json` manifest: it reads CSV, TSV, JSON and JSONL exports, keeps only the subject's records, writes a machine-readable bundle with checksums, and reports anything that would make the response wrong or late.
