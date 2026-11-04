@@ -158,11 +158,19 @@ The action runs the bundled CLI with Node 20; it has no dependencies to install.
 
 ## Library
 
+Install it in your project first:
+
+```bash
+npm install --save-dev dsar-warden
+```
+
 ```js
 import { assemble, writeBundle } from "dsar-warden";
 const { bundle, raw } = assemble(manifest, { baseDir: "requests/DSAR-2026-014" });
 if (!raw.some((f) => f.severity === "high")) writeBundle(bundle, "out");
 ```
+
+The package is ESM-only (there is no CommonJS build): use `import`, or `await import("dsar-warden")` from CommonJS.
 
 Types are included.
 
